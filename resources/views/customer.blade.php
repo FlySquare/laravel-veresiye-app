@@ -77,6 +77,23 @@
                                             </td>
                                         </tr>
                                     @endforeach
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>
+                                            <i class="expandable-table-caret fas fa-caret-right fa-fw"></i>
+                                            Tüm Ay Dönemi | Toplam: <strong>{{ $sum }}</strong>₺
+                                        </td>
+                                    </tr>
+                                    <tr class="expandable-body">
+                                        <td>
+                                            <div class="p-0">
+                                                <table class="table table-hover">
+                                                    <tbody>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
