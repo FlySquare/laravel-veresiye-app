@@ -49,7 +49,7 @@
                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                                     colspan="1"
                                                     aria-label="Engine version: activate to sort column ascending">
-                                                    Ürün Toplam Fiyatı (₺)
+                                                    Ürün Bİrim / Toplam Fiyatı (₺)
                                                 </th>
                                                 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                                     colspan="1"
@@ -69,7 +69,7 @@
                                                         #{{ $record->id }}</td>
                                                     <td>{{ $record->name }}</td>
                                                     <td>{{ $record->count }}</td>
-                                                    <td>{{ $record->price }}</td>
+                                                    <td>{{ $record->price }} / {{ $record->total_amount }}</td>
                                                     <td>{{ $record->created_at }}</td>
                                                     <td>
                                                         <a href="{{ route('customers.monthly.edit', [$customer->hashed_id,$record->id]) }}"
@@ -89,7 +89,7 @@
                                                 <th rowspan="1" colspan="1">ID</th>
                                                 <th rowspan="1" colspan="1">        Ürün İsim</th>
                                                 <th rowspan="1" colspan="1">        Ürün Adeti</th>
-                                                <th rowspan="1" colspan="1">   Ürün Toplam Fiyatı (₺)</th>
+                                                <th rowspan="1" colspan="1">Ürün Bİrim / Toplam Fiyatı (₺)</th>
                                                 <th rowspan="1" colspan="1">          Girilme Tarih</th>
                                                 <th rowspan="1" colspan="1">Diğer</th>
                                             </tr>
