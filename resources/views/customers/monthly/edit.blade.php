@@ -32,8 +32,8 @@
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
-                                            <label for="price">Toplam Fiyat <small class="requiredStar">(zorunlu)</small></label>
-                                            <input type="text" @if(isset($record)) value="{{ $record->price }}" @endif class="form-control" id="price" name="price" placeholder="Toplam Fiyat">
+                                            <label for="price">Birim Fiyat <small class="requiredStar">(zorunlu)</small></label>
+                                            <input type="text" @if(isset($record)) value="{{ $record->price }}" @endif class="form-control" id="price" name="price" placeholder="Birim Fiyat">
                                         </div>
                                     </div>
                                 </div>

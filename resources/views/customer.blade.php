@@ -67,7 +67,8 @@
                                                             <tr>
                                                                 <td>Ürün Adı: <strong>{{ $record->name }}</strong></td>
                                                                 <td>Ürün Adeti: <strong>{{ $record->count }}</strong></td>
-                                                                <td>Ürün Fiyatı: <strong>{{ $record->price }}₺</strong></td>
+                                                                <td>Birim Fiyatı: <strong>{{ $record->price }}₺</strong></td>
+                                                                <td>Toplam Fiyat: <strong>{{ $record->total_amount }}₺</strong></td>
                                                             </tr>
                                                         @endforeach
                                                         </tbody>

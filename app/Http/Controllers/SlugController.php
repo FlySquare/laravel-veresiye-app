@@ -22,7 +22,7 @@ class SlugController extends Controller
                 ->get();
             $days[$i] = [
                 'records' => $todays,
-                'sum' => $todays->sum('price'),
+                'sum' => $todays->sum('total_amount'),
             ];
             $sum += $todays->sum('price');
         }

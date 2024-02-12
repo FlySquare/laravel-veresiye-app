@@ -32,6 +32,7 @@ class MonthlyController extends Controller
         $user->customer_id = $id;
         $user->count = $request->count;
         $user->price = $request->price;
+        $user->total_amount = $request->count * $request->price;
         $user->save();
         return redirect()->route('customers.monthly.index', $id)->with($this->sendAlert('success', 'Başarılı', 'Aylık kaydı başarıyla oluşturuldu'));
     }
@@ -65,6 +66,7 @@ class MonthlyController extends Controller
         $user->name = $request->name;
         $user->count = $request->count;
         $user->price = $request->price;
+        $user->total_amount = $request->count * $request->price;
         $user->save();
         return redirect()->back()->with($this->sendAlert('success', 'Başarılı', 'Aylık kaydı başarıyla güncellendi'));
     }
