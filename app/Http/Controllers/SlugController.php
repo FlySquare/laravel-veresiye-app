@@ -24,7 +24,7 @@ class SlugController extends Controller
                 'records' => $todays,
                 'sum' => $todays->sum('total_amount'),
             ];
-            $sum += $todays->sum('price');
+            $sum += $todays->sum('total_amount');
         }
         return view('customer', compact('customer', 'days', 'sum'));
     }
