@@ -125,7 +125,7 @@
     </aside>
 
     <footer class="main-footer">
-        <strong>Copyright &copy; {{ date('Y') }} <a href="https://consulting-trust.de/">Consulting Trust</a>.</strong>
+        <strong>Copyright &copy; {{ date('Y') }} <a href="https://iamumut.com/">IamUmut.Com</a>.</strong>
         All rights reserved.
         <div class="float-right d-none d-sm-inline-block">
             <b>Developer: <a href="https://iamumut.com">Umut Can Arda</a> | Version</b> 1.0.3
