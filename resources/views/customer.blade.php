@@ -92,7 +92,6 @@
                                                         <tr>
                                                             <td>Ürün Adı: <strong>{{ $monthly_data['name'] }}</strong></td>
                                                             <td>Ürün Adeti: <strong>{{ $monthly_data['count'] }}</strong></td>
-                                                            <td>Birim Fiyatı: <strong>{{ $monthly_data['price'] }}₺</strong></td>
                                                             <td>Toplam Fiyat: <strong>{{ $monthly_data['total_amount'] }}₺</strong></td>
                                                         </tr>
                                                     @endforeach

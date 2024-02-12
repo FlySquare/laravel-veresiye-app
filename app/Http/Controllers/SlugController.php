@@ -27,7 +27,7 @@ class SlugController extends Controller
             ];
             $sum += $todays->sum('total_amount');
         }
-        // get monthly table group as name and sum of price and count and total_amount
+        // get monthly table group as name and sum of price and count and total_amount but if the price is different, it will be shown as different record
         $monthly = Monthly::where('customer_id', $customer->hashed_id)
             ->where('created_at','>=', date('Y').'-'.$month.'-01 00:00:00')
             ->where('created_at','<=', date('Y').'-'.$month.'-31 23:59:59')
@@ -41,6 +41,7 @@ class SlugController extends Controller
                     'total_amount' => $item->sum('total_amount'),
                 ];
             });
+
         return view('customer', compact('customer', 'days', 'sum', 'monthly'));
     }
 }
