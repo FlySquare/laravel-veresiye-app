@@ -27,6 +27,20 @@ class SlugController extends Controller
             ];
             $sum += $todays->sum('total_amount');
         }
-        return view('customer', compact('customer', 'days', 'sum'));
+        // get monthly table group as name and sum of price and count and total_amount
+        $monthly = Monthly::where('customer_id', $customer->hashed_id)
+            ->where('created_at','>=', date('Y').'-'.$month.'-01 00:00:00')
+            ->where('created_at','<=', date('Y').'-'.$month.'-31 23:59:59')
+            ->get()
+            ->groupBy('name')
+            ->map(function ($item, $key) {
+                return [
+                    'name' => $key,
+                    'count' => $item->sum('count'),
+                    'price' => $item->sum('price'),
+                    'total_amount' => $item->sum('total_amount'),
+                ];
+            });
+        return view('customer', compact('customer', 'days', 'sum', 'monthly'));
     }
 }
