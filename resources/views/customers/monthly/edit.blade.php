@@ -16,24 +16,30 @@
                             @csrf
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             <label for="Name">Ürün İsmi <small class="requiredStar">(zorunlu)</small></label>
                                             <input type="text" @if(isset($record)) value="{{ $record->name }}" @endif class="form-control" id="Name" name="name" placeholder="Ürün İsmi">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
                                             <label for="count">Adet <small class="requiredStar">(zorunlu)</small></label>
                                             <input type="text" @if(isset($record)) value="{{ $record->count }}" @endif class="form-control" id="count" name="count" placeholder="Adet">
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
                                             <label for="price">Birim Fiyat <small class="requiredStar">(zorunlu)</small></label>
                                             <input type="text" @if(isset($record)) value="{{ $record->price }}" @endif class="form-control" id="price" name="price" placeholder="Birim Fiyat">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="created_at">Spesifik Tarih</label>
+                                            <input type="date" @if(isset($record)) value="{{ explode(' ',$record->created_at)[0] }}" @endif class="form-control" id="created_at" name="created_at" placeholder="Spesifik Tarih">
                                         </div>
                                     </div>
                                 </div>
